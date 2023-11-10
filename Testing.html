@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/da293b66cfb8d945b32973d5c2f1f8eb?family=Futura+BT+W01+Bold" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josh Apacible's Recipes</title>
+
+    <style>
+    
+      body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgba(245, 104, 104, 0.068);
+            background-image: url("b1.jpg");
+        }
+
+
+        ol {
+            line-height: 1.6;
+            word-spacing: normal;
+        }
+
+        h3 {
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            color: rgb(0, 0, 0);
+            text-align: left;
+            padding: 1rem;
+            font-size: 25px;
+            font-family: 'Gilroy-Heavy', sans-serif;
+            margin-top: 20px;
+        }
+
+        .menu-btn {
+            width: 40px;
+            height: 30px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        
+        .menu-btn {
+             width: 40px;
+             height: 30px;
+             position: absolute;
+             top: 20px;
+             right: 20px;
+             cursor: pointer;
+             display: flex;
+             flex-direction: column;
+             justify-content: space-around;
+        }
+
+        .menu-btn span {
+            width: 30px;
+            height: 4px;
+            background: #333;
+            transition: all 0.3s ease;
+        }
+
+        .menu-btn span:nth-child(1) {
+            transform-origin: top left;
+        }
+
+        .menu-btn span:nth-child(3) {
+            transform-origin: bottom left;
+        }
+
+        .menu-btn.open span:nth-child(1) {
+            transform: rotate(45deg);
+        }
+
+        .menu-btn.open span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-btn.open span:nth-child(3) {
+            transform: rotate(-45deg);
+        }
+
+        .line {
+             border-top: 2px solid #333; 
+             margin: 5px
+        }
+
+        
+        h2{
+            color:rgb(0, 0, 0);
+            text-align: center;
+            font-weight: 200;
+            font-family: Arial, sans-serif;
+            letter-spacing: 0.3px;
+        }
+
+        h2{
+            font-size: 40px;
+            line-height: 50px;
+          
+        }
+
+        .double-line {
+             border-top: 0.5px solid rgb(0, 0, 0); 
+             margin: 50px
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 100px;
+            background-color: rgba(207, 207, 207, 0.185);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .recipe {
+            border-bottom: 1px solid #ccc;
+            padding: 20px 0;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .recipe img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .recipe h3 {
+            color: #333;
+            cursor: pointer;
+        }
+
+        .details {
+            display: none;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #ccc;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>JOSH APACIBLE</h1>
+        <div class="menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="line"></div>
+        <h2>RECIPES</h2>
+        <div class="double-line"></div>
+    </header>
+    <main>
+        <div class="recipe" onclick="toggleDetails('recipe1')">
+            <img src="spaghetti.jpg" alt="Spaghetti">
+            <h3>BEET CAPPELLETTI WITH MEYER LEMON-ZESTED GOAT CHEESE & BEET GREEN PESTO</h3>
+            <p>Serves 4-6 (Makes about 40 "little hats") These colorful pasta parcels pack a lot of spring flavour into each tiny bite. Gorgeously vibrant beef pasta filled with tangy goat cheese and meyer lemon, bathed in a buttery wine sauce</p>
+            <div class="details" id="recipe1Details">
+                <h3>INGREDIENTS</h3>
+                <h5>Beef Pasta</h5>
+                <ul>
+                    <li>1 medium-sized beet, scrubbed clean and trimmed, about 4 ounces*</li>
+                    <li>Splash of red wine vinegar </li>
+                    <li>2 cups (256g) “00” Flour + more for kneading</li>
+                    <li>¼ cup (32g) semolina flour</li>
+                    <li>2 whole eggs (100g)</li>
+                    <li>1 egg yolk (18g)</li>
+                    <li>1 teaspoon (6g) salt </li>
+                    <li>2-3 teaspoons olive oil </li>
+                </ul>
+                <h5>Lemon-Zested Goat Cheese Filling:</h5>  
+                <ul>
+                    <li>4 ounces (120g) goat cheese, softened at room temperature </li>
+                    <li>¼ cup (60g) crème fraîche</li>
+                    <li>¼ cup (60g) ricotta, drained</li>
+                    <li>¼ cup Parmigiano Reggiano </li>
+                    <li>2 tablespoons finely chopped minced herbs (parsley, mint, or basil) </li>
+                    <li>1 tablespoon meyer lemon zest </li>
+                    <li>1 tablespoon Extra-Virgin Olive Oil</li>
+                    <li>Kosher salt and freshly ground black pepper, to taste </li>
+                </ul>  
+                <h5>Beef Green Pistachio Pesto</h5>
+                </ul>
+                    <li>3 garlic cloves</li>
+                    <li>½ cup toasted pistachios</li>
+                    <li>2 cups beet greens, cleaned, stems removed, and sliced </li>
+                    <li>¼ cup picked parsley leaves </li>
+                    <li>½ cup picked basil leaves</li>
+                    <li>2-3 tablespoons freshly grated Parmigiano Reggiano </li>
+                    <li>3-4 tablespoons extra-virgin olive oil </li>
+                    <li>1 meyer lemon</li>
+                    <li>Salt and freshly cracked black pepper, to taste</li>
+                </ul>
+                <h5>Shallot-Thyme Infused White Wine Sauce </h5>
+                </ul>
+                    <li>1 cup dry white wine </li>
+                    <li>1 small shallot, stem intact, cut into quarters </li>
+                    <li>3 sprigs of fresh thyme</li>
+                    <li>1 cup unsalted butter, cubed</li>
+                    <li>1 lemon, zested</li>
+                    <li>Flowered thyme, microgreens or chervil, for Serving</li>
+                </ul>
+                <h3>COOKING INSTRUCTIONS</h3>
+                <ol>
+                    <li>Preheat oven to 400˚F and place beet in a small loaf pan or wrap in foil. Season with olive oil, salt, pepper, a splash of red wine vinegar, and a tablespoon of water. Roast until fork tender, about 25-35 minutes. </li>
+                    
+                    <li>While Beats are roasting, prepare filling: Whisk together goat cheese, crème fraîche, ricotta, and Parmigiano Reggiano until well combined. Season with herbs, meyer lemon zest, salt, pepper, and a drizzle of olive oil. Place in a piping bag or  for easy filling and set aside.  </li>
+
+                    <li>Remove from oven and cool enough to handle, peeling away skin and discarding. Puree beet on high adding just enough of the roasting liquid (or red wine vinegar) to blend until smooth. Set aside 84 grams (3 ounces) for pasta and reserve. </li>
+
+                    <li>Make the pasta dough: Place both flours onto a flat counter or wooden cutting board and use a fork to form a well in center. Season the center of the well with salt and add the olive oil. Crack eggs into the center along with beet puree. Using a fork, whisk together eggs and puree until smooth, continue whisking pulling in the flour from the interior of the circle. You can guide the circle to keep its shape by coaxing with your hand. Continue to whisk until almost all of the flour has been incorporated. If dough feels too dry add a touch of water (or olive oil for a bit more shine), alternatively if dough too wet sprinkle lightly with flour, as needed.  </li>
+
+                    <li>Using a bench scraper, bring the rest of the dough together with hands. Dust surface with more “00” flour and knead for about 10 minutes until dough is smooth and springy to the touch. Wrap tightly in plastic and rest for 30 minutes to an hour*</li>
+                    <li>While pasta rests - make Beet Green Pesto: In a food processor pulse together garlic, toasted pistachios, beet greens, parsley, basil and half the parmesan until finely chopped. With motor running, stream in olive oil until pesto is loosely blended. Season with meyer lemon zest, salt, pepper, and big squeeze of lemon juice. </li>
+                    <li>When ready to roll: Unwrap your pasta dough and place it on a clean, cool, dry working surface, like marble. For easier pasta shaping, let filling come to room temperature at this time.</li>
+                    <li>Divide dough into quarters, and working with one piece at a time, roll the dough with a small dowel or rolling pin to about 3x3” square. Beginning with the machine on its highest setting, feed the rolled out pasta dough into the machine. When it’s halfway through, pull it out. When you’ve run it all the way through the machine, pull it out and aerate the dough. Repeat 2 or 3 times on the first setting. Lightly flour your hands each time.Using the back of your hand, fold the dough. Then change the setting on your pasta machine to 1.Crank the dough through the machine. After 10 turns of the machine, catch the dough and stretch and fold the dough. Change the setting on your machine to 2 and repeat. Repeat 10 times, flouring your hands and increasing the setting each time, until your pasta is smooth and as thin as tracing paper - this is about a 5 on any pasta roller. </li>
+                    <li>Next cut and shape the cappelletti: Dust a baking sheet with semolina and lay out rolled pasta dough on a lightly floured surface (a pastry brush and a pinch bowl of flour is very handy here). Using a 3-inch pastry cutter (or rim of a glass) cut circles out of the pasta dough. Pipe or spoon 1 heaping teaspoon of goat cheese filling into each circle and shape into cappelletti by folding in half to form a “half moon” pressing to adhere edges. To complete the shape (with arc facing up) bring the two ends together with your index finger and thumb to create the cappelletti shape or “little hat” and set aside onto prepared baking sheet and repeat with remaining pasta* </li>
+                    <li>Prepare wine butter sauce: Heat a large skillet over medium-high heat. Combine wine, shallot, and thyme and cook until reduced by half. Remove thyme and shallots and discard. Whisk in butter and season with salt and pepper, keep warm over low heat while cooking pasta.  </li>
+                    <li>To cook pasta: Heat a large pot of water to a gentle rolling boil and generously season with salt. Working in batches place cappelletti into pot and “spin” into water, carefully give the pot a gentle turn as well to prevent pasta from sticking to each other (or sinking to bottom). Cook for 2 - 2½ minutes until pasta is al dente.</li>
+                    <li>Using a skimmer remove al dente pasta, shaking off excess water, and toss in white wine butter sauce to coat, spooning sauce over cappelletti to coat. To serve - divide amongst bowls and garnish with a drizzle of sauce, pesto, a sprinkling of herbs and grated Parmigiano Reggiano.</li>
+                </ol>
+                <h5>SPECIAL EQUIPMENT*</h5>
+                </ul>
+                    <li>Pasta Attachment, Dowel or Rolling Pin for rolling pasta  </li>
+                    <li>3” Round or Fluted Pastry Cutters  </li>
+                    <li>Pastry Brush, Bowl Scraper, and Bench Scraper are great pasta making tools</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="recipe" onclick="toggleDetails('recipe2')">
+            <img src="food1.jpg" alt="food1">
+            <h3>ROASTED ROOT VEGETABLES WITH CRUSHED PEPITAS</h3>
+            <p>Whether it's Thanksgiving or Christmas this is the perfect side dish that will wow with amazing seasonal results</p>
+            <div class="details" id="recipe2Details">
+                <h3>INGREDIENTS</h3>
+                <h5>Butternut Squash Puree</h5>
+                <ul>
+                    <li>1 butternut squash (about 3 pounds) seeded and halved </li>
+                    <li>4 tablespoons unsalted butter, divided</li>
+                    <li>2-4 sprigs of fresh herbs (thyme or rosemary)</li>
+                    <li>4 cloves of garlic, crushed</li>
+                    <li>Flaky sea salt and fresh cracked pepper, to taste</li>
+                </ul>
+                <h5>Pomegranate-Quince Slaw </h5>  
+                <ul>
+                    <li>2 tablespoons quince paste</li>
+                    <li>2 tablespoons minced shallot</li>
+                    <li>1 tablespoon apple cider vinegar </li>
+                    <li>2-3 tablespoons olive oil </li>
+                    <li>2 cups thinly sliced cabbage (purple and savoy)  </li>
+                    <li>¼ cup pomegranate seeds </li>
+                    <li>¼ cup toasted and chopped hazelnuts </li>
+                    <li>Handful of fresh mint, chopped </li>
+                    <li>1 lemon, zested </li>
+                </ul>  
+                <h5>Pan-Seared Scallops</h5>
+                </ul>
+                    <li>8 large sea Scallops, cleaned</li>
+                    <li>Flaky sea salt and fresh cracked pepper, to taste</li>
+                    <li>2 teaspoons olive oil</li>
+                    <li>Lemon juice, to taste </li>
+                    <li>3 tablespoons unsalted butter </li>
+                </ul>
+                <h3>COOKING INSTRUCTIONS</h3>
+                <ol>
+                    <li>Preheat oven to 425˚F. </li>
+                    <li>Prepare parsnips, slice thin tips from the parsnips to prevent from burning and discard. Slice parsnips into quarters, slicing fist in half and then again in half lengthwise to create 2-inch pieces.</li>
+                    <li>Heat a 14-inch skillet over high heat and drizzle with oil, once hot sear vegetables in batches, starting with carrots followed by red onions, turnips, and parsnips. Season generously with salt, pepper, and drizzle with more olive oil to coat, continue cooking until caramelized.</li>
+                    <li>Add sliced ginger and stir in half the butter, once melted drizzle in chicken stock to just cover the bottom of the pan. Bring to a boil before roasting in the oven until tender*.</li>
+                    <li>To finish - toss vegetables with fresh chopped herbs and remaining butter. Enjoy warm.</li>
+                </ol>
+            </div>
+        </div>
+        <div class="recipe" onclick="toggleDetails('recipe3')">
+            <img src="food2.jpg" alt="food2">
+            <h3>STUFFED PORK TENDERLOIN RECIPE</h3>
+            <p>Whether it's Thanksgiving or Christmas this is the perfect side dish that will wow with amazing seasonal results</p>
+            <div class="details" id="recipe3Details">
+                <h3>INGREDIENTS</h3>
+                <ul>
+                    <li>1kg pork loin roasting joint, skin scored</li>
+                    <li>175g Manchego cheese, finely sliced</li>
+                    <li>150g membrillo</li>
+                    <li>2 sage sprigs</li>
+                    <li>Olive oil, for drizzling</li>
+                    <li>1 head of garlic, cut in half horizontally</li>
+                    <li>1 thyme sprig</li>
+                    <li>200ml medium-dry sherry</li>
+                    <li>Sea salt and freshly ground pepper</li>
+                </ul>
+                <h3>COOKING INSTRUCTIONS</h3>
+                <ol>
+                    <li>Preheat the oven to 220°C/Gas 7.</li>
+                    <li>Lay the joint, skin side down, on a chopping board and cut three-quarters of the way into the flesh lengthways from top to bottom. Open the meat out to form a long rectangle and season with salt and pepper.</li>
+                    <li>Arrange the slices of cheese and the membrillo along the centre of the meat. Scatter the leaves from 1 sage sprig on top, and roll the meat up to enclose the stuffing. Tie at 3cm intervals along the length of the meat with string.</li>
+                    <li>Place the thyme and remaining sage in a hob-proof roasting tray with the garlic. Lay the pork on top, skin side up. Drizzle with olive oil and season generously with salt and pepper. </li>
+                    <li>Transfer the roasting tray to the preheated oven and cook for 20 minutes until the skin is crispy and golden. Turn the oven down to 180°/Gas 4 and cook for a further 50 minutes until the pork is just cooked through. Remove the pork from the tin and set aside on a serving dish to rest. </li>
+                    <li>Put the roasting tray on the hob. Pour in the sherry and bring to the boil, scraping up any bits stuck in the bottom of the tray. Lower the heat, squash the garlic and remove the herbs. Add any resting juices from the meat. </li>
+                    <li>To serve, carve the pork into thick slices, strain the sauce and pour it over the meat.</li>
+                </ol>
+            </div>
+        </div>
+        <div class="recipe" onclick="toggleDetails('recipe4')">
+            <img src="food3.jpg" alt="food3">
+            <h3>ROAST BEEF WITH CARAMELISED ONION GRAVY RECIPE</h3>
+            <p>A weekend wouldn't feel like a proper weekend without a really good roast lunch, and roast beef is out absolute favourite</p>
+            <div class="details" id="recipe4Details">
+                <h3>INGREDIENTS</h3>
+                <ul>
+                    <li>1 head of garlic (about 12 cloves), cut in half</li>
+                    <li>5 thyme sprigs, leaves picked, plus 1 extra</li>
+                    <li>1.8kg beef sirloin</li>
+                    <li>3–4 tbsp olive oil</li>
+                    <li>4 large onions, sliced</li>
+                    <li>150g plain flour</li>
+                    <li>500ml red wine</li>
+                    <li>1.5 litres hot beef stock</li>
+                </ul>
+                <h3>COOKING INSTRUCTIONS</h3>
+                <ol>
+                    <li>Rub the garlic halves and thyme leaves all over the beef. Place the joint in a large dish, drizzle over the olive oil, then rub it into the meat all over. Cover and leave to marinate in the fridge for 1–2 days before you cook it (you don’t have to marinate the beef in advance, but it does make it super tasty! – see Tip). Take the beef out of the fridge about an hour before cooking, to let it come up to room temperature.</li>
+                    <li>Preheat the oven to 190°C/170°C fan/Gas 5.</li>
+                    <li>Preheat a dry frying pan until very hot, then sear the beef over a high heat until it’s coloured on all sides. Place the beef in a large, hob-proof roasting tray with the garlic halves and the thyme sprig and roast for about 45 minutes for medium rare (or until it reaches 45–47°C in the centre, if you have a meat thermometer). Add 10–12 minutes for medium (or until it reaches 55–60°C in the centre), or add about 20 minutes if you like it well done (or until it reaches 65–70°C in the centre).</li>
+                    <li>Transfer the beef to a warm platter, cover loosely with foil and leave to rest for at least 20 minutes, and anything up to 40 minutes, before serving.</li>
+                    <li>Meanwhile, to make the gravy, place the roasting tray over a low heat on the hob, add the onions to the juices in the tray and cook gently for about 20 minutes, stirring occasionally, until really soft and caramelised. Stir in the flour until combined, then whisk in the red wine, making sure there are no lumps. Bring to the boil, whisking, then bubble rapidly until the red wine has reduced by half. Stir in the hot stock, then cook over a medium heat for about 8 minutes, stirring occasionally, until reduced to a thick gravy.</li>
+                    <li>Carve the beef thinly and pour the gravy into a warm jug. Serve with Yorkshire Puddings and steamed chard.</li>
+                </ol>
+            </div>
+        </div>
+        <div class="recipe" onclick="toggleDetails('recipe5')">
+            <img src="food4.jpg" alt="food4">
+            <h3>HOLIDAY LEMON-HERB CHICKEN THIGHS WITH A CRISPY BACON GRAVY</h3>
+            <p>Perfected in a HexClad pan, this Chicken Dish is sure to be a highlight of your holiday dinner!</p>
+            <div class="details" id="recipe5Details">
+                <h3>INGREDIENTS</h3>
+                <h5>Lemon-Herb Chicken Thighs</h6>
+                <ul>
+                    <li>8 each bone-in chicken thighs (about 3-4 pounds) </li>
+                    <li>Flaky sea salt and fresh cracked pepper, to taste </li>
+                    <li>Olive oil, as needed </li>
+                    <li>2-3 tablespoons all-purpose flour </li>
+                </ul>    
+                <h5>Bacon-Apple Cider Gravy</h5>
+                <ul>
+                    <li>4 slices, thick cut bacon, sliced into ½ inch pieces</li>
+                    <li>½ cup diced yellow onion</li>
+                    <li>2 garlic cloves, chopped </li>
+                    <li>1-12 ounce bottle of dry hard cider</li>
+                    <li>2 cups warm chicken stock, divided</li>
+                    <li>2 lemons, divided</li>
+                    <li>3-4 sprigs of fresh thyme</li>
+                    <li>2 sprigs of fresh rosemary</li>
+                    <li>Flaky sea salt and fresh cracked pepper, to taste</li>
+                </ul>
+                <h3>COOKING INSTRUCTIONS</h3>
+                <ol>
+                    <li>Preheat oven to 425˚F. </li>
+                    <li>Prepare chicken thighs, seasoning skin-side generously with salt and pepper. Heat a large fry pan over medium-high heat, drizzle with olive oil and sear thighs, skin side down until caramelized, about 3-5 minutes. Dust chicken thighs with flour and generously season with salt, pepper, chili flakes and lemon zest. Flip thighs over and “fry” flour into rendered chicken fat for 2-3 minutes, remove chicken thighs and set aside while preparing gravy. </li>
+                    <li>For the gravy - Add bacon to pan, cooking until crisp and scraping up caramelized bits. Add onions and garlic to the pan, cooking until just tender and fragrant, about a minute. Slice 1 lemon into wedges and scatter around the pan along with fresh herbs, cook for another minute. Deglaze with cider and simmer until reduced by half. Stir in hot chicken stock and bring to a simmer. </li>
+                    <li>Return chicken thighs to the pan, skin side up, nestling into the gravy. Zest remaining lemon over chicken and season with salt, pepper, and chili flakes. Pop into the oven to roast until crispy, about 20 minutes or until juices run clear. Serve straight out of the pan, garnishing with sliced lemon and fresh herbs.  </li>
+            </div>
+        </div>
+        <div class="recipe" onclick="toggleDetails('recipe6')">
+            <img src="food5.jpg" alt="food5">
+            <h3>PAN-SEARED SCALLOPS WITH BUTTERNUT SQUASH PUREE & POMEGRANATE-QUINCE SLAW</h3>
+            <p>The ultimate holiday appetizer is served with this warm and colorful Pan Seared Scallop with a delicious butternut squash puree and an amazing slaw!</p>
+            <div class="details" id="recipe6Details">
+                <h4>INGREDIENTS</h4>
+                <h5>Butternut Squash Puree</h5>
+                <ul>
+                    <li>1 butternut squash (about 3 pounds) seeded and halved </li>
+                    <li>4 tablespoons unsalted butter, divided</li>
+                    <li>2-4 sprigs of fresh herbs (thyme or rosemary)</li>
+                    <li>4 cloves of garlic, crushed</li>
+                    <li>Flaky sea salt and fresh cracked pepper, to taste</li>
+                </ul>
+                <h5>Pomegranate-Quince Slaw </h5>  
+                <ul>
+                    <li>2 tablespoons quince paste</li>
+                    <li>2 tablespoons minced shallot</li>
+                    <li>1 tablespoon apple cider vinegar </li>
+                    <li>2-3 tablespoons olive oil </li>
+                    <li>2 cups thinly sliced cabbage (purple and savoy)  </li>
+                    <li>¼ cup pomegranate seeds </li>
+                    <li>¼ cup toasted and chopped hazelnuts </li>
+                    <li>Handful of fresh mint, chopped </li>
+                    <li>1 lemon, zested </li>
+                </ul>  
+                <h5>Pan-Seared Scallops</h5>
+                </ul>
+                    <li>8 large sea Scallops, cleaned</li>
+                    <li>Flaky sea salt and fresh cracked pepper, to taste</li>
+                    <li>2 teaspoons olive oil</li>
+                    <li>Lemon juice, to taste </li>
+                    <li>3 tablespoons unsalted butter </li>
+                </ul>
+                <h3>COOKING INSTRUCTIONS</h3>
+                <ol>
+                    <li>Preheat oven to 425˚F and line a roasting pan with foil. </li>
+                    <li>Prepare squash for puree - place squash halves on a baking sheet and divide butter, herbs, and garlic amongst each half. Season generously with salt and pepper and olive oil, roast until tender for about 45 minutes to an hour. </li>
+                    <li>Once squash is cool enough to handle, scoop out flesh (including garlic) and place in a blender along with roasted garlic, discarding herbs. Pulse until smooth, season with salt and pepper. </li>
+                    <li>Prepare vinaigrette - in a small bowl, whisk together quince paste and 1 tablespoon hot water until smooth. Whisk in shallot, apple cider vinegar, and olive oil until smooth. Set aside. </li>
+                    <li>Prepare slaw - toss together cabbages, pomegranate seeds, hazelnuts, and mint. Zest lemon over the slaw and toss with enough vinaigrette to coat, being careful to not over dress. </li>
+                    <li>Prepare scallops - Heat a skillet over high heat. Find the wide “top” side of the scallops and place facing up on a plate lined with a paper towel. Season with salt and pepper. Drizzle hot pan with oil and sear scallops until golden and caramelized. Flip scallops and juice half a lemon over scallops, swirl in a few knobs of butter and let brown, finish with remaining lemon juice and season with salt and pepper. </li>
+                    <li>To serve - divide warmed squash puree amongst plates (or shallow bowls) and nestle scallops on top, garnishing with pomegranate-quince slaw and a drizzle of quince vinaigrette, serve immediately.</li>
+                </ol>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        document.querySelector('.menu-btn').addEventListener('click', function() {
+            this.classList.toggle('open');
+        });
+
+        function toggleDetails(recipeId) {
+            const details = document.getElementById(recipeId + 'Details');
+            details.style.display = details.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function rateRecipe(recipeId, rating) {
+            const ratingContainer = document.getElementById(recipeId + 'Rating');
+            ratingContainer.innerHTML = ''; 
+
+            for (let i = 1; i <= 5; i++) {
+                const star = document.createElement('span');
+                star.innerHTML = i <= rating ? '&#9733;' : '&#9734;';
+                star.className = 'star';
+                star.onclick = () => rateRecipe(recipeId, i); 
+                ratingContainer.appendChild(star);
+            }
+        }
+    </script>
+
+</body>
+</html>
